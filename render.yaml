@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: makan-siloam-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run main.py --server.port=$PORT --server.enableCORS=false
+    autoDeploy: true
